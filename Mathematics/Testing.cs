@@ -43,6 +43,10 @@ namespace ArrowUtilities.Mathematics
                 //Congrats you go first
             }
             
+            //Roll a bunch of dice...
+            var allTheDice = RNG.D4() + RNG.D6() + RNG.D10() + RNG.D12() + RNG.D20();
+            //Fun fact: The lowest possible result is 5 while the highest is 52
+
         }
         
 

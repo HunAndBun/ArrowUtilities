@@ -39,6 +39,66 @@ namespace ArrowUtilities.Mathematics
             if (sides >= 1) return Random.Range(0, sides) + 1;
             return -1;
         }
+
+        /// <summary>
+        /// <para>Flips a coin</para>
+        /// </summary>
+        /// <returns>Integer result of the toss (0 or 1)</returns>
+        public static int CoinFlipInt()
+        {
+            return Random.value > 0.5f ? 0 : 1;
+        }
+                
+        /// <summary>
+        /// <para>Flips a coin</para>
+        /// </summary>
+        /// <returns>String result of the toss (Heads or Tails)</returns>
+        public static string CoinFlip()
+        {
+            return Random.value > 0.5f ? "Heads" : "Tails";
+        }
+        
+        /// <summary>
+        /// <para>Rolls a 4-sided die</para>
+        /// </summary>
+        /// <returns>Integer result of the roll</returns>
+        public static int D4()
+        {
+            return Random.Range(1, 5);
+        }
+        /// <summary>
+        /// <para>Rolls a 6-sided die</para>
+        /// </summary>
+        /// <returns>Integer result of the roll</returns>
+        public static int D6()
+        {
+            return Random.Range(1, 7);
+        }
+        /// <summary>
+        /// <para>Rolls a 10-sided die</para>
+        /// </summary>
+        /// <returns>Integer result of the roll</returns>
+        public static int D10()
+        {
+            return Random.Range(1, 11);
+        }
+        /// <summary>
+        /// <para>Rolls a 12-sided die</para>
+        /// </summary>
+        /// <returns>Integer result of the roll</returns>
+        public static int D12()
+        {
+            return Random.Range(1, 13);
+        }
+        /// <summary>
+        /// <para>Rolls a 20-sided die</para>
+        /// </summary>
+        /// <returns>Integer result of the roll</returns>
+        public static int D20()
+        {
+            return Random.Range(1, 21);
+        }
+        
         
 
         /// <summary>
