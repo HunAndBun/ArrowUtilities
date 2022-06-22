@@ -99,42 +99,6 @@ namespace ArrowUtilities.Mathematics
             return Random.Range(1, 21);
         }
         
-        
-
-        /// <summary>
-        /// <para>Generic helper function for IEnumerable that takes in an IEnumerable, and outputs a randomized version
-        /// <b><br/>WARNING: This duplicates the enumerable! Avoid using in loops or performance-critical contexts.</b></para>
-        /// </summary>
-        /// <param name="enumerable">The IEnumerable to randomize.</param>
-        /// <typeparam name="T">The type of object enumerated.</typeparam>
-        /// <returns>A new IEnumerable with randomized entries.</returns>
-        public static IEnumerable<T> RandomizeEnumerable<T>(this IEnumerable<T> enumerable)
-        {
-            return enumerable.OrderBy(_ => GetReferenceToRandom().Next());
-        }
-        /// <summary>
-        /// <para>Generic helper function for List that takes in a List, and outputs a randomized version
-        /// <b><br/>WARNING: This duplicates the List! Avoid using in loops or performance-critical contexts.</b></para>
-        /// </summary>
-        /// <param name="list">The List to randomize.</param>
-        /// <typeparam name="T">The type of object listed.</typeparam>
-        /// <returns>A new List with randomized entries.</returns>
-        public static List<T> RandomizeList<T>(this List<T> list)
-        {
-            return list.OrderBy(_ => GetReferenceToRandom().Next()).ToList();
-        }
-        
-        /// <summary>
-        /// <para>Generic helper function for IEnumerable that takes in a collection, and outputs a random entry.</para>
-        /// </summary>
-        /// <param name="enumerable">The collection to randomly draw from.</param>
-        /// <typeparam name="T">The type of object listed.</typeparam>
-        /// <returns>A random entry from the collection.</returns>
-        public static T GetRandomEntry<T>(this IEnumerable<T> enumerable)
-        {
-            return enumerable.OrderBy(_ => rand.Next()).First();
-        }
-        
         /// <summary>
         /// <para>Gets or creates a static instance of System.Random through null-coalescing assignment.</para>
         /// </summary>
@@ -143,6 +107,5 @@ namespace ArrowUtilities.Mathematics
         {
             return rand ??= new System.Random();
         }
-        
     }
 }

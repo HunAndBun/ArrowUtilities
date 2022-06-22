@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using ArrowUtilities.TilemapTools;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace ArrowUtilities.Mathematics
 {
@@ -46,9 +49,33 @@ namespace ArrowUtilities.Mathematics
             //Roll a bunch of dice...
             var allTheDice = RNG.D4() + RNG.D6() + RNG.D10() + RNG.D12() + RNG.D20();
             //Fun fact: The lowest possible result is 5 while the highest is 52
-
         }
-        
+
+        public void SetSomeFancyTiles()
+        {
+            var tilemap = new Tilemap();
+            var tile = ScriptableObject.CreateInstance<Tile>();
+            var positionWithinTilemap = new Vector3Int(6, 9, 0);
+            
+            //Let's draw a massive square of tiles!
+            tilemap.SetSquareOfTiles(positionWithinTilemap, 180, tile);
+            
+            //Not oblong enough... 
+            tilemap.SetRectangleOfTiles(positionWithinTilemap, 90, 180, tile);
+            
+            //Much better!
+            //How about a dotted-line?
+            var position = new Vector3Int();
+            for (int i = 0; i < 100; i++)
+            {
+                position.x = i*5;
+                //These methods cache the most recently used size and tile, saving on the constant creation of
+                //new TileBase[] and new Vector3Int! When finished setting tiles entirely, this array cache can be
+                //cleared using TileHelperFunctions.ClearTileHelperCache();
+                tilemap.SetSquareOfTiles(position, 2, tile);
+            }
+        }
+
 
     }
 }

@@ -1,8 +1,7 @@
 ﻿using System;
-using Newtonsoft.Json;
 using UnityEngine;
 
-namespace ArrowUtilities.Mathematics
+namespace ArrowUtilities.Serialization
 {
     
     /// <summary>
