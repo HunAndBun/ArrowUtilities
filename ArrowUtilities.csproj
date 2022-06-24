@@ -11,7 +11,7 @@
         <PackageTags>Unity,Serialization,JSON,Random,Tilemaps</PackageTags>
         <Description>ArrowUtilities is a kitchen-sink class library for Unity that provides tools for randomness mechanics, tilemaps, easy serialization of the Unity Vector structs, and more.</Description>
         <PackageIcon>ArrowUtilitiesLogo128x128.png</PackageIcon>
-        <PackageIconUrl></PackageIconUrl>
+        <PackageIconUrl>https://raw.githubusercontent.com/HunAndBun/ArrowUtilities/main/Assets/ArrowUtilitiesLogo128x128.png</PackageIconUrl>
         <TargetFrameworks>net471;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 

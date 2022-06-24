@@ -7,6 +7,7 @@
     <authors>HunAndBun</authors>
     <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
     <icon>ArrowUtilitiesLogo128x128.png</icon>
+    <iconUrl>https://raw.githubusercontent.com/HunAndBun/ArrowUtilities/main/Assets/ArrowUtilitiesLogo128x128.png</iconUrl>
     <description>ArrowUtilities is a kitchen-sink class library for Unity that provides tools for randomness mechanics, tilemaps, easy serialization of the Unity Vector structs, and more.</description>
     <tags>Unity,Serialization,JSON,Random,Tilemaps</tags>
     <repository type="git" url="https://github.com/HunAndBun/ArrowUtilities" />
