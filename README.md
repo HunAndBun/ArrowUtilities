@@ -34,7 +34,7 @@ RNG.FiftyFifty(); //Simple 50/50 chance. Returns a boolean.
 RNG.DiceRoll(5) //Takes in a number of 'sides' for the die. Returns an int from 1 to the number of sides.
 RNG.D6(); //Preset version of DiceRoll() with 6 sides. Standard D4, D6, D10, D12, and D20 are all implemented. 
 RNG.GetReferenceToRandom(); //Returns a static instance of System.Random, instantiated the first time you call it. 
-//For Enumerables. All methods are generic extentions that may be called directly using the dot operator.
+//For Enumerables. All methods are generic extensions that may be called directly using the dot operator.
 myList.Randomize(); //Short-hand for "myList.OrderBy(_ => RNG.GetReferenceToRandom.Next());"
 myList.GetRandomEntry(); //Short-hand for "myList.OrderBy(_ => RNG.GetReferenceToRandom().Next()).First()"
 ```

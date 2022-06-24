@@ -1,13 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ArrowUtilities.Mathematics
 {
+    /// <summary>
+    /// <para>Static class containing extension methods for implementors of the generic IEnumerable such as List or Array.</para>
+    /// </summary>
     public static class EnumerableHelpers
     {
-
+        /// <summary>
+        /// <para>Shortcut for adding all 26 letters of the alphabet to an array. (Utilized in RNG.Letter)</para>
+        /// </summary>
+        /// <returns>Char[] with all 26 letters of the alphabet.</returns>
+        public static char[] GetAlphabet()
+        {
+            return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+        }
+        /// <summary>
+        /// <para>Shortcut for adding all 10 digits to an array. (Utilized in RNG.Digit)</para>
+        /// </summary>
+        /// <returns>Char[] with all 10 numeric digits.</returns>
+        public static char[] GetDigits()
+        {
+            return "0123456789".ToCharArray();
+        }
+        /// <summary>
+        /// <para>Shortcut for adding all 36 alphanumeric characters to an array.</para>
+        /// </summary>
+        /// <returns>Char[] with all 36 alphanumeric characters.</returns>
+        public static char[] GetAlphanumerics()
+        {
+            return "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".ToCharArray();
+        }
+       
         /// <summary>
         /// <para>Generic function for initializing an array with the contents filled with a single value.</para>
         /// </summary>
@@ -22,7 +49,6 @@ namespace ArrowUtilities.Mathematics
             {
                 array[i] = fill;
             }
-
             return array;
         }
 
@@ -30,27 +56,17 @@ namespace ArrowUtilities.Mathematics
         //Randomizers
         
         /// <summary>
-        /// <para>Generic helper function for IEnumerable that takes in an IEnumerable, and outputs a randomized version
+        /// <para>Generic helper function for implementors of generic IEnumerable that takes in an IEnumerable, and outputs a randomized version
         /// <b><br/>WARNING: This duplicates the enumerable! Avoid using in loops or performance-critical contexts.</b></para>
         /// </summary>
         /// <param name="enumerable">The IEnumerable to randomize.</param>
         /// <typeparam name="T">The type of object enumerated.</typeparam>
         /// <returns>A new IEnumerable with randomized entries.</returns>
-        public static IEnumerable<T> RandomizeEnumerable<T>(this IEnumerable<T> enumerable)
+        public static IEnumerable<T> Randomize<T>(this IEnumerable<T> enumerable)
         {
             return enumerable.OrderBy(_ => RNG.GetReferenceToRandom().Next());
         }
-        /// <summary>
-        /// <para>Generic helper function for List that takes in a List, and outputs a randomized version
-        /// <b><br/>WARNING: This duplicates the List! Avoid using in loops or performance-critical contexts.</b></para>
-        /// </summary>
-        /// <param name="list">The List to randomize.</param>
-        /// <typeparam name="T">The type of object listed.</typeparam>
-        /// <returns>A new List with randomized entries.</returns>
-        public static List<T> RandomizeList<T>(this List<T> list)
-        {
-            return list.OrderBy(_ => RNG.GetReferenceToRandom().Next()).ToList();
-        }
+
         
         /// <summary>
         /// <para>Generic helper function for IEnumerable that takes in a collection, and outputs a random entry.</para>
@@ -60,7 +76,8 @@ namespace ArrowUtilities.Mathematics
         /// <returns>A random entry from the collection.</returns>
         public static T GetRandomEntry<T>(this IEnumerable<T> enumerable)
         {
-            return enumerable.OrderBy(_ => RNG.GetReferenceToRandom().Next()).First();
+            var enumerable1 = enumerable.ToList();
+            return enumerable1[Random.Range(0, enumerable1.Count)];
         }
 
     }

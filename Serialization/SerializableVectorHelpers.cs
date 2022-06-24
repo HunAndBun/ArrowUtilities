@@ -2,6 +2,9 @@
 
 namespace ArrowUtilities.Serialization
 {
+    /// <summary>
+    /// <para>Static class containing serializable versions of the UnityEngine 'Vector' family of structs.</para>
+    /// </summary>
     public static class SerializableVectorHelpers
     {
         /// <summary>
@@ -43,6 +46,16 @@ namespace ArrowUtilities.Serialization
         public static Vector3IntSerializable ToSerializable(this Vector3Int vector3Int)
         {
             return new Vector3IntSerializable(vector3Int);
+        }
+        /// <summary>
+        /// <para>Method for easily prepping Vector3Int structs for JSON serialization.
+        /// <br/><b>Note: The same can be done in reverse with ".ToVector3Int()"</b></para>
+        /// </summary>
+        /// <param name="vector4">Vector to serialize</param>
+        /// <returns>The same vector in a form that is more easily converted by serialization methods.</returns>
+        public static Vector4Serializable ToSerializable(this Vector4 vector4)
+        {
+            return new Vector4Serializable(vector4);
         }
     }
 }
