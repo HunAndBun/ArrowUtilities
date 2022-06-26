@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 
 namespace ArrowUtilities.TilemapTools
 {
+    //TODO: Find a couple more tilemap related helper functions. There should absolutely be some more helpful stuff I can add!
     /// <summary>
     /// <para>Static class containing methods designed to set many tiles at runtime in a performant way.</para>
     /// </summary>

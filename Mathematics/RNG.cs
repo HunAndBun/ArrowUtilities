@@ -65,7 +65,7 @@ namespace ArrowUtilities.Mathematics
         /// <para>Flips a coin</para>
         /// </summary>
         /// <returns>Integer result of the toss (0 or 1)</returns>
-        public static int CoinFlipInt()
+        public static int CoinFlipInt() //TODO: Decide if this is worth keeping.
         {
             return Random.value > 0.5f ? 0 : 1;
         }

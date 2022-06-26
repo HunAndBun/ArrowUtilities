@@ -157,6 +157,47 @@
             </summary>
             <returns>Static instance of System.Random()</returns>
         </member>
+        <member name="T:ArrowUtilities.Optimization.MethodSpeedTester">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ArrowUtilities.Optimization.MethodSpeedTester.TestSingleAction(System.Action,System.Int32)">
+            <summary>
+            <para>Simple Stopwatch-based test for execution speed of an Action over a given number of iterations.</para>
+            </summary>
+            <param name="action">Action you want to test.</param>
+            <param name="iterations">How many times the Action is run during the test.</param>
+        </member>
+        <member name="M:ArrowUtilities.Optimization.MethodSpeedTester.CompareActions(System.Action,System.Action,System.Int32)">
+            <summary>
+            <para>Coroutine for testing two Actions and comparing how fast they execute over a given number of iterations.
+            <br/><b>Note: You must run this using StartCoroutine from a MonoBehaviour!</b></para>
+            </summary>
+            <param name="action1">Action that will be tested first</param>
+            <param name="action2">Action that will be tested second</param>
+            <param name="iterations">How many times each Action is run during the test.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ArrowUtilities.Optimization.WaitFor">
+            <summary>
+            <para>A static helper class for efficient generation and use of the WaitForSeconds object.</para>
+            </summary>
+        </member>
+        <member name="M:ArrowUtilities.Optimization.WaitFor.Seconds(System.Single)">
+            <summary>
+            <para>Accessor for a Dictionary of WaitForSeconds objects, allowing for seamless caching of WaitForSeconds without the need of declaring it in your own script.</para>
+            </summary>
+            <param name="seconds">Number of seconds to yield.</param>
+            <returns>WaitForSeconds object from Dictionary</returns>
+        </member>
+        <member name="M:ArrowUtilities.Optimization.WaitFor.Minutes(System.Single)">
+            <summary>
+            <para>Accessor for a Dictionary of WaitForSeconds objects, allowing for seamless caching of WaitForSeconds without the need of declaring it in your own script.</para>
+            </summary>
+            <param name="minutes">Number of minutes to yield. (Multiplied by 60 for the WaitForSeconds object)</param>
+            <returns>WaitForSeconds object from Dictionary</returns>
+        </member>
         <member name="T:ArrowUtilities.Serialization.SerializableVectorHelpers">
             <summary>
             <para>Static class containing serializable versions of the UnityEngine 'Vector' family of structs.</para>

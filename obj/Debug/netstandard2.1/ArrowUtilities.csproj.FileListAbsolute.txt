@@ -22,3 +22,4 @@ C:\Game Development\repos\ArrowUtilities\obj\Debug\netstandard2.1\ArrowUtilities
 C:\Game Development\repos\ArrowUtilities\obj\Debug\netstandard2.1\ArrowUtilities.dll
 C:\Game Development\repos\ArrowUtilities\obj\Debug\netstandard2.1\ArrowUtilities.pdb
 C:\Game Development\repos\ArrowUtilities\bin\Debug\netstandard2.1\ArrowUtilities.xml
+C:\Game Development\repos\ArrowUtilities\bin\Debug\netstandard2.1\Assets\ArrowUtilitiesLogo128x128.png
