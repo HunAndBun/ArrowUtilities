@@ -1,2 +1,4 @@
 *.cache
 obj/rider.project.restore.info
+/[Bb]in/
+/[Oo]bj

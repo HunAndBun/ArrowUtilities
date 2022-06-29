@@ -5,7 +5,7 @@
         <PackageId>HunAndBun.ArrowUtilities</PackageId>
         <Title>ArrowUtilities</Title>
         <Authors>HunAndBun</Authors>
-        <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/HunAndBun/ArrowUtilities</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>Unity,Serialization,JSON,Random,Tilemaps</PackageTags>
@@ -16,32 +16,34 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile>bin\Debug\ArrowUtilities.xml</DocumentationFile>
+        <DocumentationFile>bin\Debug\ArrowUtilities.xml</DocumentationFile>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\ArrowUtilities.xml</DocumentationFile>
+        <DocumentationFile>bin\Release\ArrowUtilities.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-      <Reference Include="UnityEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\..\..\Program Files\Unity\Hub\Editor\2022.1.0f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>..\..\..\Program Files\Unity\Hub\Editor\2022.1.0f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
-      </Reference>
+        <Reference Include="UnityEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\Program Files\Unity\Hub\Editor\2022.1.0f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\Program Files\Unity\Hub\Editor\2022.1.0f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="Mathematics\Testing.cs" />
+        <Compile Remove="Mathematics\Testing.cs" />
+        <Compile Remove="Optimization\WaitFor.cs" />
+        <Compile Remove="Editor\SafeRevealProperty.cs" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="Assets\ArrowUtilitiesLogo128x128.png">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
+        <None Include="Assets\ArrowUtilitiesLogo128x128.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
 </Project>
