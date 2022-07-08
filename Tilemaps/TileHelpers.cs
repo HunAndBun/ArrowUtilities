@@ -2,11 +2,11 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace ArrowUtilities.TilemapTools {
+namespace ArrowUtilities.Tilemaps {
 	/// <summary>
     ///     <para>Static class containing methods designed to set many tiles at runtime in a performant way.</para>
     /// </summary>
-    public static class TileHelperFunctions {
+    public static class TileHelpers {
 		private static int _size, _height, _width;
 		private static Tile _tileForSquare, _tileForRectangle;
 		private static Vector3Int _sizeForSquare, _sizeForRectangle;
@@ -50,8 +50,7 @@ namespace ArrowUtilities.TilemapTools {
 					.GetPreFilledArray<TileBase> //Get an array filled with the same tile, and cache it too.
 					(
 						boundsInt.size.x * boundsInt.size.y *
-						boundsInt.size
-							.z, //Tilemaps are technically 3D (sorta) so you need the same number of tiles as a "cube" of them would entail.
+						boundsInt.size.z, //Tilemaps are technically 3D (sorta) so you need the same number of tiles as a "cube" of them would entail.
 						tile
 					);
 			_tileForSquare = tile; //Cache the tile.
