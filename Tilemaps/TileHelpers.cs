@@ -112,7 +112,7 @@ namespace ArrowUtilities.Tilemaps {
         ///         Use this when either method is no longer being utilized in the scene, and likely will not be used again.
         ///     </para>
         /// </summary>
-        public static void ClearTileHelperCache() {
+        public static void ClearCache() {
 			//Set everything to zero or null. The only actual memory savings are with the now-null types,
 			//but setting everything to zero will ensure the next usage of the setter methods starts fresh.
 			_tileForRectangle = null;

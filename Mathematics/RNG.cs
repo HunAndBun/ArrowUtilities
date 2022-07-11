@@ -31,7 +31,9 @@ namespace ArrowUtilities.Mathematics {
         ///     <para>A basic random boolean generator with customized win percentage</para>
         /// </summary>
         /// <param name="zeroToOne">Percent chance of success (0.35 = 35%)</param>
-        /// <returns>True if the result is within the set percentage</returns>
+        /// <returns>True if the result is within the set percentage<br/>
+        /// <para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-RNG#chance">See entry on ArrowUtilities Wiki</a></para>
+        /// </returns>
         public static bool Chance(float zeroToOne) {
 			return UnityEngine.Random.value < zeroToOne;
 		}
@@ -39,7 +41,9 @@ namespace ArrowUtilities.Mathematics {
         /// <summary>
         ///     <para>Boolean generator based on a random value compared against 0.5f</para>
         /// </summary>
-        /// <returns>True if the value is within the 0.5f tolerance</returns>
+        /// <returns>True if the value is within the 0.5f tolerance<br/>
+        /// <para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-RNG#fiftyfifty">See entry on ArrowUtilities Wiki</a></para>
+        /// </returns>
         public static bool FiftyFifty() {
 			return UnityEngine.Random.value < 0.5f;
 		}
@@ -50,7 +54,9 @@ namespace ArrowUtilities.Mathematics {
         ///         <b>Note: values less than '1' will always return '-1.'</b>
         ///     </para>
         /// </summary>
-        /// <param name="sides">How many sides the die rolled has.</param>
+        /// <param name="sides">How many sides the die rolled has.
+        /// <para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-RNG#chance">See entry on ArrowUtilities Wiki</a></para>
+        /// </param>
         /// <returns></returns>
         public static int DiceRoll(int sides) {
 			if (sides >= 1) return UnityEngine.Random.Range(0, sides) + 1;
