@@ -5,6 +5,9 @@ using UnityEngine.Tilemaps;
 namespace ArrowUtilities.Tilemaps {
 	/// <summary>
     ///     <para>Static class containing methods designed to set many tiles at runtime in a performant way.</para>
+    /// <para>
+	/// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-TileHelpers">See entry on ArrowUtilities Wiki</a>
+	/// </para>
     /// </summary>
     public static class TileHelpers {
 		private static int _size, _height, _width;
@@ -25,7 +28,10 @@ namespace ArrowUtilities.Tilemaps {
         /// <param name="tilemap">The Tilemap asset to set to.</param>
         /// <param name="bottomLeftCorner">The bottom, leftmost corner of the shape.</param>
         /// <param name="size">The number of tiles per side.</param>
-        /// <param name="tile">The tile to set.</param>
+        /// <param name="tile">The tile to set.
+        /// <br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-TileHelpers#SetSquareOfTiles">See entry on ArrowUtilities Wiki</a>
+        /// </para></param>
         public static void SetSquareOfTiles(this Tilemap tilemap, Vector3Int bottomLeftCorner, int size, Tile tile) {
 			BoundsInt boundsInt;
 			if (size == _size) //If the size chosen is the same as the previous usage...
@@ -72,7 +78,10 @@ namespace ArrowUtilities.Tilemaps {
         /// <param name="bottomLeftCorner">The bottom, leftmost corner of the shape</param>
         /// <param name="height">The number of tiles on the y axis</param>
         /// <param name="width">The number of tiles on the x axis</param>
-        /// <param name="tile">The tile to set.</param>
+        /// <param name="tile">The tile to set.
+        /// <br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-TileHelpers#SetRectangleOfTiles">See entry on ArrowUtilities Wiki</a>
+        /// </para></param>
         public static void SetRectangleOfTiles(this Tilemap tilemap, Vector3Int bottomLeftCorner, int height, int width,
 			Tile tile) {
 			BoundsInt boundsInt;
@@ -111,6 +120,9 @@ namespace ArrowUtilities.Tilemaps {
         ///         Nullifies the cached data for the SetSquareOfTiles and SetRectangleOfTiles methods. <br />
         ///         Use this when either method is no longer being utilized in the scene, and likely will not be used again.
         ///     </para>
+        ///     <para>
+        ///			<a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-TileHelpers#ClearCache">See entry on ArrowUtilities Wiki</a>
+        ///		</para>
         /// </summary>
         public static void ClearCache() {
 			//Set everything to zero or null. The only actual memory savings are with the now-null types,

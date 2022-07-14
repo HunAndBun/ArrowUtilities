@@ -5,6 +5,7 @@ using Random = System.Random;
 namespace ArrowUtilities.Mathematics {
     /// <summary>
     ///     <para>Tools to assist with randomized mechanics</para>
+    ///		<para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-RNG">See entry on ArrowUtilities Wiki</a></para>
     /// </summary>
     // ReSharper disable once InconsistentNaming
 	public static class RNG {

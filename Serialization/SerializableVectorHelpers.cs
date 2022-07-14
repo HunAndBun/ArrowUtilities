@@ -3,6 +3,9 @@
 namespace ArrowUtilities.Serialization {
     /// <summary>
     ///     <para>Static class containing serializable versions of the UnityEngine 'Vector' family of structs.</para>
+    ///		<para>
+    ///			<a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-SerializableVectorHelpers">See entry on ArrowUtilities Wiki</a>
+    ///		</para>
     /// </summary>
     public static class SerializableVectorHelpers {
         /// <summary>
@@ -12,7 +15,10 @@ namespace ArrowUtilities.Serialization {
         ///     </para>
         /// </summary>
         /// <param name="vector2">Vector to serialize</param>
-        /// <returns>The same vector in a form that is more easily converted by serialization methods.</returns>
+        /// <returns>The same vector in a form that is more easily converted by serialization methods.
+        /// <br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-SerializableVectorHelpers#Usage">See entry on ArrowUtilities Wiki</a>
+        /// </para></returns>
         public static Vector2Serializable ToSerializable(this Vector2 vector2) {
 			return new Vector2Serializable(vector2);
 		}
@@ -24,7 +30,10 @@ namespace ArrowUtilities.Serialization {
         ///     </para>
         /// </summary>
         /// <param name="vector2Int">Vector to serialize</param>
-        /// <returns>The same vector in a form that is more easily converted by serialization methods.</returns>
+        /// <returns>The same vector in a form that is more easily converted by serialization methods.
+        /// <br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-SerializableVectorHelpers#Usage">See entry on ArrowUtilities Wiki</a>
+        /// </para></returns>
         public static Vector2IntSerializable ToSerializable(this Vector2Int vector2Int) {
 			return new Vector2IntSerializable(vector2Int);
 		}
@@ -36,7 +45,10 @@ namespace ArrowUtilities.Serialization {
         ///     </para>
         /// </summary>
         /// <param name="vector3">Vector to serialize</param>
-        /// <returns>The same vector in a form that is more easily converted by serialization methods.</returns>
+        /// <returns>The same vector in a form that is more easily converted by serialization methods.
+        /// <br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-SerializableVectorHelpers#Usage">See entry on ArrowUtilities Wiki</a>
+        /// </para></returns>
         public static Vector3Serializable ToSerializable(this Vector3 vector3) {
 			return new Vector3Serializable(vector3);
 		}
@@ -48,7 +60,10 @@ namespace ArrowUtilities.Serialization {
         ///     </para>
         /// </summary>
         /// <param name="vector3Int">Vector to serialize</param>
-        /// <returns>The same vector in a form that is more easily converted by serialization methods.</returns>
+        /// <returns>The same vector in a form that is more easily converted by serialization methods.
+        /// <br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-SerializableVectorHelpers#Usage">See entry on ArrowUtilities Wiki</a>
+        /// </para></returns>
         public static Vector3IntSerializable ToSerializable(this Vector3Int vector3Int) {
 			return new Vector3IntSerializable(vector3Int);
 		}
@@ -60,7 +75,10 @@ namespace ArrowUtilities.Serialization {
         ///     </para>
         /// </summary>
         /// <param name="vector4">Vector to serialize</param>
-        /// <returns>The same vector in a form that is more easily converted by serialization methods.</returns>
+        /// <returns>The same vector in a form that is more easily converted by serialization methods.
+        /// <br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-SerializableVectorHelpers#Usage">See entry on ArrowUtilities Wiki</a>
+        /// </para></returns>
         public static Vector4Serializable ToSerializable(this Vector4 vector4) {
 			return new Vector4Serializable(vector4);
 		}

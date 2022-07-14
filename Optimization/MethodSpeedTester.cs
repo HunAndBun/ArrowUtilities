@@ -13,6 +13,9 @@ namespace ArrowUtilities.Optimization {
     ///         TestSingleAction, or CompareActions, for seeing which one is faster.
     ///         <br />Your results will be shown through the Debug.Log method in Unity.
     ///     </para>
+	///		<para>
+    ///			<a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-MethodSpeedTester">See entry on ArrowUtilities Wiki</a>
+    ///		</para>
     /// </summary>
     public static class MethodSpeedTester {
         /// <summary>
@@ -22,7 +25,10 @@ namespace ArrowUtilities.Optimization {
         ///     </para>
         /// </summary>
         /// <param name="action">Action you want to test.</param>
-        /// <param name="iterations">How many times the Action is run during the test.</param>
+        /// <param name="iterations">How many times the Action is run during the test.
+        ///	<br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-MethodSpeedTester#TestSingleAction">See entry on ArrowUtilities Wiki</a>
+        /// </para></param>
         public static void TestSingleAction(Action action, int iterations) {
 	        
 	        #region Checks and warnings
@@ -67,8 +73,11 @@ namespace ArrowUtilities.Optimization {
         /// <param name="action1">Action that will be tested first</param>
         /// <param name="action2">Action that will be tested second</param>
         /// <param name="iterations">How many times each Action is run during the test.</param>
-        /// <param name="generateLog"></param>
-        /// <returns></returns>
+        /// <param name="generateLog">Whether or not to generate a log file for the test.
+        /// <br/><para>
+        /// <a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-MethodSpeedTester#CompareActions">See entry on ArrowUtilities Wiki</a>
+        /// </para></param>
+        /// 
         public static IEnumerator CompareActions(Action action1, Action action2, int iterations, bool generateLog) {
 			
 	        #region Checks and warnings

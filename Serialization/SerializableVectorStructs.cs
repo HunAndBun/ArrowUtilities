@@ -5,6 +5,7 @@ using UnityEngine;
 namespace ArrowUtilities.Serialization {
     /// <summary>
     ///     <para>Simpler Vector2 class for serialization to JSON</para>
+    ///		<para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#structs">See entry on ArrowUtilities Wiki</a></para>
     /// </summary>
     [Serializable]
 	public struct Vector2Serializable {
@@ -23,7 +24,8 @@ namespace ArrowUtilities.Serialization {
         /// <summary>
         ///     <para>Method for ease of conversion post-deserialization</para>
         /// </summary>
-        /// <returns>Original UnityEngine implementation of Vector2</returns>
+        /// <returns>Original UnityEngine implementation of Vector2
+        /// <br/><para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#usage">See entry on ArrowUtilities Wiki</a></para></returns>
         public Vector2 ToVector2() {
 			return new Vector2(x, y);
 		}
@@ -59,6 +61,7 @@ namespace ArrowUtilities.Serialization {
 
     /// <summary>
     ///     <para>Simpler Vector2Int class for serialization to JSON</para>
+    ///		<para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#structs">See entry on ArrowUtilities Wiki</a></para>
     /// </summary>
     [Serializable]
 	public struct Vector2IntSerializable {
@@ -75,7 +78,8 @@ namespace ArrowUtilities.Serialization {
         /// <summary>
         ///     <para>Method for ease of conversion post-deserialization</para>
         /// </summary>
-        /// <returns>Original UnityEngine implementation of Vector2Int</returns>
+        /// <returns>Original UnityEngine implementation of Vector2Int
+        /// <br/><para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#usage">See entry on ArrowUtilities Wiki</a></para></returns>
         public Vector2Int ToVector2Int() {
 			return new Vector2Int(x, y);
 		}
@@ -111,6 +115,7 @@ namespace ArrowUtilities.Serialization {
 
     /// <summary>
     ///     <para>Simpler Vector3 class for serialization to JSON</para>
+    ///		<para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#structs">See entry on ArrowUtilities Wiki</a></para>
     /// </summary>
     [Serializable]
 	public struct Vector3Serializable {
@@ -132,7 +137,8 @@ namespace ArrowUtilities.Serialization {
         /// <summary>
         ///     <para>Method for ease of conversion post-deserialization</para>
         /// </summary>
-        /// <returns>Original UnityEngine implementation of Vector3</returns>
+        /// <returns>Original UnityEngine implementation of Vector3
+        /// <br/><para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#usage">See entry on ArrowUtilities Wiki</a></para></returns>
         public Vector3 ToVector3() {
 			return new Vector3(x, y, z);
 		}
@@ -171,6 +177,7 @@ namespace ArrowUtilities.Serialization {
 
     /// <summary>
     ///     <para>Simpler Vector3Int class for serialization to JSON</para>
+    ///		<para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#structs">See entry on ArrowUtilities Wiki</a></para>
     /// </summary>
     [Serializable]
 	public struct Vector3IntSerializable {
@@ -192,7 +199,8 @@ namespace ArrowUtilities.Serialization {
         /// <summary>
         ///     <para>Method for ease of conversion post-deserialization</para>
         /// </summary>
-        /// <returns>Original UnityEngine implementation of Vector3Int</returns>
+        /// <returns>Original UnityEngine implementation of Vector3Int
+        /// <br/><para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#usage">See entry on ArrowUtilities Wiki</a></para></returns>
         public Vector3Int ToVector3Int() {
 			return new Vector3Int(x, y, z);
 		}
@@ -231,6 +239,7 @@ namespace ArrowUtilities.Serialization {
 
     /// <summary>
     ///     <para>Simpler Vector4 class for serialization to JSON</para>
+    ///		<para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#structs">See entry on ArrowUtilities Wiki</a></para>
     /// </summary>
     [Serializable]
 	public struct Vector4Serializable {
@@ -257,9 +266,10 @@ namespace ArrowUtilities.Serialization {
         /// <summary>
         ///     <para>Method for ease of conversion post-deserialization</para>
         /// </summary>
-        /// <returns>Original UnityEngine implementation of Vector3</returns>
-        public Vector3 ToVector3() {
-			return new Vector3(x, y, z);
+        /// <returns>Original UnityEngine implementation of Vector4
+        /// <br/><para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs#usage">See entry on ArrowUtilities Wiki</a></para></returns>
+        public Vector4 ToVector4() {
+			return new Vector4(x, y, z, w);
 		}
 
 		#region Constructors

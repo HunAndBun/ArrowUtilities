@@ -7,15 +7,23 @@ namespace ArrowUtilities.Mathematics {
 
 
     /// <summary>
-    ///     <para>Static class containing extension methods for implementors of the generic IEnumerable such as List or Array.</para>
+    ///     <para>
+    ///			Static class containing extension methods for implementors of the generic IEnumerable such as List or Array.
+    ///		</para>
+    ///		<para>
+    ///			<a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-EnumerableHelpers">See entry on ArrowUtilities Wiki</a>
+    ///		</para>
     /// </summary>
     public static class EnumerableHelpers {
 
 	    #region Basic Character Arrays
 	    /// <summary>
         ///     <para>Shortcut for adding all 26 letters of the alphabet to an array. (Utilized in RNG.Letter)</para>
-        /// </summary>
-        /// <returns>Char[] with all 26 letters of the alphabet.</returns>
+	    /// </summary>
+        /// <returns>Char[] with all 26 letters of the alphabet.
+        /// <para>
+	    ///		<br/><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-EnumerableHelpers#basic-character-arrays">See entry on ArrowUtilities Wiki</a>
+	    ///	</para></returns>
         public static char[] GetAlphabet() {
 			return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
 		}
@@ -23,7 +31,10 @@ namespace ArrowUtilities.Mathematics {
         /// <summary>
         ///     <para>Shortcut for adding all 10 digits to an array. (Utilized in RNG.Digit)</para>
         /// </summary>
-        /// <returns>Char[] with all 10 numeric digits.</returns>
+        /// <returns>Char[] with all 10 numeric digits.
+        /// <para>
+        ///		<br/><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-EnumerableHelpers#basic-character-arrays">See entry on ArrowUtilities Wiki</a>
+        ///	</para></returns>
         public static char[] GetDigits() {
 			return "0123456789".ToCharArray();
 		}
@@ -31,7 +42,10 @@ namespace ArrowUtilities.Mathematics {
         /// <summary>
         ///     <para>Shortcut for adding all 36 alphanumeric characters to an array.</para>
         /// </summary>
-        /// <returns>Char[] with all 36 alphanumeric characters.</returns>
+        /// <returns>Char[] with all 36 alphanumeric characters.
+        /// <para>
+        ///		<br/><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-EnumerableHelpers#basic-character-arrays">See entry on ArrowUtilities Wiki</a>
+        ///	</para></returns>
         public static char[] GetAlphanumerics() {
 			return "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".ToCharArray();
 		}
@@ -45,7 +59,10 @@ namespace ArrowUtilities.Mathematics {
         /// <param name="length">Number of entries on resulting array.</param>
         /// <param name="fill">Object or value to fill every entry with.</param>
         /// <typeparam name="T">Type of value or reference being stored.</typeparam>
-        /// <returns>Array with the same entry at every index.</returns>
+        /// <returns>Array with the same entry at every index.
+        /// <para>
+        ///		<br/><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-EnumerableHelpers#getprefilledarrayt">See entry on ArrowUtilities Wiki</a>
+        /// </para></returns>
         public static T[] GetPreFilledArray<T>(int length, T fill) { //NOTE: Array.Fill is not compatible with .NET Framework 4.7.1, so this method is the only option.
 			var array = new T[length];
 			for (var i = 0; i < length; i++) array[i] = fill;
@@ -63,7 +80,10 @@ namespace ArrowUtilities.Mathematics {
         /// </summary>
         /// <param name="enumerable">The IEnumerable to randomize.</param>
         /// <typeparam name="T">The type of object enumerated.</typeparam>
-        /// <returns>A new IEnumerable with randomized entries.</returns>
+        /// <returns>A new IEnumerable with randomized entries.
+        /// <para>
+        ///		<br/><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-EnumerableHelpers#ienumerabletrandomizet">See entry on ArrowUtilities Wiki</a>
+        /// </para></returns>
         public static IEnumerable<T> Randomize<T>(this IEnumerable<T> enumerable) {
 			return enumerable.OrderBy(_ => RNG.GetReferenceToRandom().Next());
 		}
@@ -74,7 +94,10 @@ namespace ArrowUtilities.Mathematics {
         /// </summary>
         /// <param name="enumerable">The collection to randomly draw from.</param>
         /// <typeparam name="T">The type of object listed.</typeparam>
-        /// <returns>A random entry from the collection.</returns>
+        /// <returns>A random entry from the collection.
+        /// <para>
+        ///		<br/><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-EnumerableHelpers#ienumerabletgetrandomentryt">See entry on ArrowUtilities Wiki</a>
+        /// </para></returns>
         public static T GetRandomEntry<T>(this IEnumerable<T> enumerable) {
 			var enumerable1 = enumerable.ToList();
 			return enumerable1[Random.Range(0, enumerable1.Count)];

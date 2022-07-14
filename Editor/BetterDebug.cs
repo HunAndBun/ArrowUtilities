@@ -4,10 +4,12 @@ using UnityEngine;
 namespace ArrowUtilities.Editor {
 	/// <summary>
 	/// <para>A class that gives the user more options for debugging their game in a nicely formatted way.</para>
+	/// <para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-BetterDebug">See entry on ArrowUtilities Wiki</a></para>
 	/// </summary>
 	public static class BetterDebug {
 		/// <summary>
 		/// <para>Formatting for a block of debug messages.</para>
+		/// <para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-BetterDebug#bdblock-class">See entry on ArrowUtilities Wiki</a></para>
 		/// </summary>
 		public class BDBlock {
 			/// <summary>
@@ -37,7 +39,8 @@ namespace ArrowUtilities.Editor {
 			/// <summary>
 			/// <para>Adds a new message to the block.</para>
 			/// </summary>
-			/// <param name="message">Message you'd like to add.</param>
+			/// <param name="message">Message you'd like to add.
+			///	<br/><para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-BetterDebug#using-betterdebug">See entry on ArrowUtilities Wiki</a></para></param>
 			public void Add(string message) {
 				Messages.Add(message);
 			}
@@ -46,7 +49,8 @@ namespace ArrowUtilities.Editor {
 		/// <summary>
 		/// <para>Prints full BDBlock to the Unity console.</para>
 		/// </summary>
-		/// <param name="bdBlock">The Better Debug Block to print.</param>
+		/// <param name="bdBlock">The Better Debug Block to print.
+		/// <br/><para><a href="https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-BetterDebug#using-betterdebug">See entry on ArrowUtilities Wiki</a></para></param>
 		public static void Log(this BDBlock bdBlock) {
 			var color = ColorUtility.ToHtmlStringRGB(bdBlock.Color);
 			if (!ReferenceEquals(bdBlock.Title, ""))
