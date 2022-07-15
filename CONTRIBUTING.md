@@ -11,6 +11,7 @@ Thanks for considering contributing to Arrow Utilities! 😃
   - [What Can I Contribute?](#what-can-i-contribute)
     - [Suggestions](#suggestions)
     - [Issues and Bugs](#issues-and-bugs)
+    - [Monetarily](#monetarily)
     - [Your Own Code](#your-own-code)
       - [Getting Started](#getting-started)
       - [Test Builds](#test-builds)
@@ -79,6 +80,9 @@ Issues for Arrow Utilities are also-- you guessed it-- handled through [github's
 - How do YOU suggest fixing it? Arrow Utils. is made by programmers FOR programmers, so feel free to chime in!
 - ANY other info that you're willing to share, and you believe is important.
   - System specs, project files, Unity version, IDE, etc..  
+
+### Monetarily
+If you're not looking to dive into the code, documentation, etc., or you just want to show your support for the projects produced by @HunAndBun overall, You can always contribute monetarily through the 'Sponsor' button above. This supports both Arrow Utilities, and future projects undertaken by the @HunAndBun team. Don't feel presured to do so whatsoever, as Arrow Utilities is, and always was, intended to be freeware.
 
 ### Your Own Code
 Depending on your skill level, jumping into the code itself can be a bit of a daunting task. However, Arrow Utilities in itself was made by a beginner so there's probably plenty to fix! 😅 Let's go over some options!
