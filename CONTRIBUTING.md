@@ -29,7 +29,7 @@ The Arrow Utilities project and all of it's participants are governed by the [Co
 
 ## Contributing
 ### Purpose of Arrow Utilities
-When contributing to Arrow Utilities, it's important to know what it sets out to do. The following is a list of what exactly that is.
+When contributing to Arrow Utilities, it's important to know what it sets out to do. The following is a list of what exactly that is. I also highly suggest reading through [the wiki to see what's already implemented!](https://github.com/HunAndBun/ArrowUtilities/wiki)
 <br/><br/><b>✔️ Arrow Utilities DOES:</b>
 - Target game development in Unity Engine.
 - Provide general-purpose... 
