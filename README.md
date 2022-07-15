@@ -7,28 +7,19 @@ ArrowUtilities is a kitchen-sink style Unity class library aimed at adding game 
 
 📖 **[Read the highly-detailed documentation on the wiki!](https://github.com/HunAndBun/ArrowUtilities/wiki)** 📖
 
-# Features
+# Feature Overview:
+Here's a brief rundown on the major features included in Arrow Utilities. All classes and methods are fully documented both via XML for the library itself, and extensively in the wiki linked above. [Skip to the bottom for a final word and how to contribute yourself!](#final-word)
 
 ### Serialization
-Anyone who has attempted to serialize the Vector family of Structs in the UnityEngine namespace, even with robust serializing tools like Newtonsoft.Json, has probably run into this issue: 
-<br/> ![FVwBaL6XoAAeiRF](https://user-images.githubusercontent.com/26573464/175223683-25b21efd-63b3-4e68-a642-87ad454b4adc.png)
-<br/>With ArrowUtilities, this is a simple fix.
-
-```C#
-var myVector = new Vector2(0f,0f);
-//Time to serialize!
-var serializableForm = myVector.ToSerializable();
+JSON Serialization of Unity's built-in Vector Structs has been a long-time pain to deal with, given it's self-referential members. Even employing robust serialization tools like Newtonsoft's JSON.NET. As a fix for this, Arrow Utilities employs a series of 1-to-1 structs intended soley for the serialization of every single type of Unity Engine Vector.
+```csharp
+// To convert...
+var myVec = new Vector2(0, 0)
+var serializableForm = myVec.ToSerializable();
+// To get original...
+myVec = serializableForm.ToVector2();
 ```
-
-This converts the standard Unity Vector2 struct to a Vector2Serializable struct, containing only the needed data, and a
-method to quickly change it back.
-
-```C#
-var unityVersionOnceAgain = serializableForm.ToVector2();
-```
-
-Needless to say, this functionality is available for Vector2, Vector2Int, Vector3, Vector3Int, and Vector4.<br/>
-If needed, you can of-course construct these directly. [You can read more about this system here!](https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs)
+[Read more about this system, and the reason it was implemented HERE!](https://github.com/HunAndBun/ArrowUtilities/wiki/(Struct)-SerializableVectorStructs)
 
 ### Randomness
 Pseudo-Random mechanics are by no-means difficult to program. However, you may find yourself making lots of helper
@@ -59,10 +50,10 @@ myTilemap.SetSquareOfTiles(myVector3Int, 10, myTile);
 
 The best part is, the TileBase array is cached, so if you only change the location you're drawing and keep the tile and size the same, you'll save on a likely very large iterator call! [You can read more about it here!](https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-TileHelpers)
 
-### Misc
-Arrow Utilities has some other offerings worth taking a look at, specifically in the debugging and optimization departments. For example, check out this cool debug log block! [You can read more about it here!](https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-BetterDebug)
+### Debugging & Optimization
+Arrow Utilities has some other offerings worth taking a look at, specifically in the debugging and optimization departments. For example, check out this cool debug log block! These customizable blocks can be assembled as you gather data, or built and logged all at once. They're also utilized in the `MethodSpeedTester` class to give you clean results on the speed of your methods! [You can read more about these block-debugs here!](https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-BetterDebug)
 <br/> ![image](https://user-images.githubusercontent.com/26573464/178102421-601ef8b1-3c06-4267-a174-7f90089d9c43.png)
-<br/> Also check out the [optimizations page for more details on that!](https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-MethodSpeedTester)
+<br/> Also check out the [optimizations page for more details on the `MethodSpeedTester` class!](https://github.com/HunAndBun/ArrowUtilities/wiki/(Class)-MethodSpeedTester)
 
 ## Final Word
 Arrow Utilities will always be free to use, and [you can even contribute yourself](https://github.com/HunAndBun/ArrowUtilities/blob/main/CONTRIBUTING.md) if you're willing. **If any of this interests you, [I highly suggest checking out the detailed wiki for information regarding everything in store.](https://github.com/HunAndBun/ArrowUtilities/wiki)** 
